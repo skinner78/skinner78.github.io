@@ -1,0 +1,177 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  line-height: 180%;
+  color: #fff;
+  background-color: #323232;
+  text-align: center;
+}
+
+.img1 {
+  background: url(disney1.jpg);
+  min-height: 100%;
+}
+.img2 {
+  background: url(disney9.jpg);
+  min-height: 60%;
+}
+.img3 {
+  background: url(disney12.jpg);
+  min-height: 100%;
+}
+.img4 {
+  background: url(disney13.jpg);
+  min-height: 100%;
+}
+.img5 {
+  background: url(disney10.jpg);
+  min-height: 100%;
+}
+.img6 {
+  background: url(disney7.jpg);
+  min-height: 100%;
+}
+.img7 {
+  background: url(disney8.jpg);
+  min-height: 100%;
+}
+.img8 {
+  background: url(disney16.jpg);
+  min-height: 100%;
+}
+.img9 {
+  background: url(disney15.jpg);
+  min-height: 100%;
+}
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8,
+.img9 {
+  position: relative;
+  opacity: 0.85;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no;
+}
+section {
+  padding: 50px 80px;
+}
+.heading {
+  position: absolute;
+  top: 50%;
+  font-size: 500%;
+  text-shadow: 0 0 15px #000;
+  width: 100%;
+  letter-spacing: 8px;
+}
+footer {
+  text-align: center;
+  color: lightgrey;
+}
+
+/* button */
+
+.button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 10;
+  color: white;
+}
+.blurred {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  filter: url(#goo);
+}
+.blurred::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 100%;
+  transition: 1.5s cubic-bezier(0, 2, 0.61, -0.05);
+}
+.blurred::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border-radius: 100%;
+  transition: 1.7s cubic-bezier(0, 2, 0.61, -0.05);
+}
+.blurred > span:nth-of-type(1),
+.blurred > span:nth-of-type(2) {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-color: black;
+  border-radius: 100%;
+  transition: 1.4s cubic-bezier(0, 2, 0.61, -0.05);
+}
+.button:hover .blurred::before {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+}
+.button:hover .blurred::after {
+  width: 15px;
+  height: 15px;
+  top: 30px;
+  left: 45px;
+}
+.button:hover .blurred > span:nth-of-type(1) {
+  width: 30px;
+  height: 30px;
+  top: -10px;
+  left: -20px;
+}
+.button:hover > .blurred > span:nth-of-type(2) {
+  width: 25px;
+  height: 25px;
+  top: 40px;
+  left: -20px;
+}
+
+/* button */
+
+/* This is for mobile veiwing */
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 250%;
+  }
+  h1 {
+    font-size: 105%;
+  }
+  p {
+    font-size: 90%;
+  }
+}
