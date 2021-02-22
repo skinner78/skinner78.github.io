@@ -169,13 +169,7 @@ i {
   .css-element {
     yourcsscode: ;
   }
-}
-.css-element {
-  display: block;
-}
-.css-element {
-  display: none;
-}
+
 
 @media (max-width: 768px) {
   .heading {
